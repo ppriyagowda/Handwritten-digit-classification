@@ -1,0 +1,232 @@
+/* General Page Styling */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #eef2f7, #dbeafe);
+    margin: 0;
+    padding: 25px;
+    text-align: center;
+    color: #2c3e50;
+}
+
+/* Main Heading */
+h1 {
+    color: #1e3a5f;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+h3 {
+    color: #2c3e50;
+    margin-top: 5px;
+}
+
+/* Dashboard Layout */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 25px auto;
+    max-width: 1250px;
+}
+
+/* Cards */
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    width: 320px;
+    min-height: 350px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.16);
+}
+
+/* Drawing Canvas */
+#canvas {
+    background: black;
+    border: 3px solid #2563eb;
+    border-radius: 8px;
+    cursor: crosshair;
+    max-width: 100%;
+    touch-action: none;
+}
+
+/* Buttons */
+button {
+    padding: 11px 16px;
+    margin: 7px 3px;
+    border: none;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.04);
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+/* Predict Button */
+.predict {
+    background: #2563eb;
+    color: white;
+}
+
+.predict:hover {
+    background: #1d4ed8;
+}
+
+/* Clear Button */
+.clear {
+    background: #dc2626;
+    color: white;
+}
+
+.clear:hover {
+    background: #b91c1c;
+}
+
+/* Load History Button */
+.load {
+    background: #f59e0b;
+    color: #222;
+}
+
+.load:hover {
+    background: #d97706;
+}
+
+/* Prediction Result */
+#result {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 15px;
+    background: #eff6ff;
+    border-radius: 10px;
+}
+
+/* Confidence Score */
+#confidence {
+    font-size: 17px;
+    margin-top: 15px;
+    padding: 12px;
+    background: #ecfdf5;
+    color: #047857;
+    border-radius: 8px;
+}
+
+/* Model Accuracy */
+.card p {
+    font-size: 25px;
+    font-weight: bold;
+    color: #16a34a;
+}
+
+/* Chart */
+#chart {
+    max-width: 100%;
+    max-height: 260px;
+}
+
+/* Live Prediction History */
+#liveHistory {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 15px;
+    min-height: 55px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* History Number Boxes */
+#liveHistory span {
+    display: inline-block;
+    background: #d1fae5;
+    color: #065f46;
+    margin: 5px;
+    padding: 12px 17px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Database History Table */
+table {
+    width: 90%;
+    max-width: 1000px;
+    margin: 25px auto;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+    padding: 14px;
+    border: 1px solid #e5e7eb;
+    text-align: center;
+}
+
+th {
+    background: #2563eb;
+    color: white;
+    font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+    background: #f1f5f9;
+}
+
+tbody tr:hover {
+    background: #dbeafe;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    body {
+        padding: 12px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 380px;
+    }
+
+    table {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    th,
+    td {
+        padding: 8px 4px;
+    }
+}

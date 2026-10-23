@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AI Digit Recognizer</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+body {
+    font-family: Arial;
+    background: #eef2f7;
+    text-align: center;
+}
+
+h1 {
+    color: #2c3e50;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 300px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+}
+
+canvas {
+    background: black;
+    border: 2px solid black;
+}
+
+/* Buttons */
+button {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.predict { background: #007bff; color: white; }
+.clear { background: red; color: white; }
+.load { background: orange; color: white; }
+
+/* Result */
+#result {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+#confidence {
+    font-size: 16px;
+}
+
+/* Live history boxes */
+#liveHistory span {
+    display: inline-block;
+    background: #d4edda;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+/* Table */
+table {
+    margin-top: 20px;
+    border-collapse: collapse;
+    width: 80%;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+th {
+    background: #007bff;
+    color: white;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>AI Handwritten Digit Recognizer</h1>
+
+<div class="container">
+
+<!-- Canvas -->
+<div class="card">
+<h3>Drawing Canvas</h3>
+<canvas id="canvas" width="280" height="280"></canvas><br>
+
+<button class="predict" onclick="predict()">Predict</button>
+<button class="clear" onclick="clearCanvas()">Clear</button>
+<button class="load" onclick="loadHistory()">Load History</button>
+</div>
+
+<!-- Result -->
+<div class="card">
+<h3>Prediction Result</h3>
+
+<div id="result">Predicted Digit: -</div>
+<div id="confidence">Confidence: -</div>
+
+<h4 style="margin-top:20px;">Model Accuracy</h4>
+<p>{{accuracy}}%</p>
+</div>
+
+<!-- Chart -->
+<div class="card">
+<h3>Prediction Chart</h3>
+<canvas id="chart"></canvas>
+</div>
+
+</div>
+
+<!-- Live History -->
+<h3>Live Prediction History</h3>
+<div id="liveHistory"></div>
+
+<!-- Table -->
+<h3>Saved Prediction History (Database)</h3>
+<table align="center">
+<thead>
+<tr>
+<th>ID</th>
+<th>Digit</th>
+<th>Confidence (%)</th>
+<th>Time</th>
+</tr>
+</thead>
+<tbody id="table"></tbody>
+</table>
+
+<script src="/static/script.js"></script>
+
+</body>
+</html>
