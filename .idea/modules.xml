@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Handwritten-Digit-Classification.iml" filepath="$PROJECT_DIR$/Handwritten-Digit-Classification.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../OneDrive/Pictures/.idea/Pictures.iml" filepath="$PROJECT_DIR$/../OneDrive/Pictures/.idea/Pictures.iml" />
     </modules>
   </component>
 </project>
