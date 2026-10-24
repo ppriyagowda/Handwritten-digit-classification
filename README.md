@@ -76,6 +76,12 @@ AI-Handwritten-Digit-Recognition/
 │   ├── style.css
 │   └── script.js
 │
+├── screenshots
+│   ├── login.png
+│   └── prediction.png
+│   └── top3-predictions.png
+│   └── dashboard.png
+│
 └── README.md
 ```
 
@@ -159,8 +165,8 @@ The model is designed to classify grayscale digit images into ten classes:
 ### 2. Handwritten Digit Prediction
 ![Digit Prediction](screenshots/prediction.png)
 
-### 3. Top-3 Predictions
-![Top-3 Predictions](screenshots/top3.png)
+### 3. Top3-Predictions
+![top3-predictions](screenshots/top3-predictions.png)
 
 ### 4. Analytics Dashboard
 ![Analytics Dashboard](screenshots/dashboard.png)
