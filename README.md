@@ -1,4 +1,4 @@
-# ✍️ AI Handwritten Digit  System
+# ✍️ AI Handwritten Digit Recognition System
 
 ## Recognizing handwritten digits using Machine Learning and Deep Learning
 
@@ -65,6 +65,7 @@ AI-Handwritten-Digit-Recognition/
 │
 ├── app.py
 ├── mnist_model.h5
+├── train_model.py
 ├── requirements.txt
 │
 ├── templates/
@@ -78,7 +79,6 @@ AI-Handwritten-Digit-Recognition/
 └── README.md
 ```
 
-*Note: Update this structure to match the actual files in your repository.*
 
 ## ⚙️ Installation and Setup
 
@@ -91,7 +91,7 @@ AI-Handwritten-Digit-Recognition/
 ### Step 1: Clone the Repository
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
+git clone https://github.com/ppriyagowda/Handwritten-digit-classification.git
 ```
 
 ### Step 2: Open the Project Directory
